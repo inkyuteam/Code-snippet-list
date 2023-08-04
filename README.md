@@ -68,3 +68,12 @@ If you want to make your own boilerplate using this project as base, just go for
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
+
+
+
+## Code Editor (highlight)
+Using "react-ace" library
+
+import AceEditor from "react-ace";
+
+with "mode" props, we can set the language of the coding panel.

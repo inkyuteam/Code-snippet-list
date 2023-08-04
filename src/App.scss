@@ -1,0 +1,72 @@
+:root {
+  --pad-tip: 2px;
+  --pad-1: 4px;
+  --pad-2: 8px;
+  --pad-3: 12px;
+  --pad-4: 16px;
+  --pad-5: 20px;
+  --pad-6: 24px;
+
+  --highlight-color: #575951;
+  
+  --dark-color: #363f39;
+}
+
+$side-bar-width: 200px;
+
+.app {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.app-header {
+  padding: var(--pad-3);
+  font-style: italic;
+  background-color: var(--dark-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  font-size: large;
+}
+
+.app-container {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  background-color: var(--highlight-color);
+  padding-top: var(--pad-tip);
+  border-radius: var(--pad-tip);
+}
+
+.menu-bar {
+  width: $side-bar-width;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.code-editor-header {
+  background-color: purple;
+}
+
+.code-editor-container {
+  flex: 1;
+  display: flex;
+}
+
+.app-footer {
+  background-color: purple;
+  padding: var(--pad-1);
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+}

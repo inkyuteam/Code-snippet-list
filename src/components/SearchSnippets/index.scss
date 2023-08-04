@@ -1,0 +1,28 @@
+.search-snippets-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-snippets-container label {
+    margin-right: var(--pad-5);
+}
+
+input[type="radio"] {
+    accent-color: gray;
+}
+
+.search-input {
+    padding: var(--pad-2);
+    width: 240px;
+    margin-right: var(--pad-5);
+    border: 1px solid gray;
+    border-radius: var(--pad-2);
+    background-color: gray;
+    color: white;
+    font-size: medium;
+    cursor: pointer;
+}
+
+.search-input::placeholder {
+    color: white;
+}

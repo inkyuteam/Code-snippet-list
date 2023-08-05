@@ -1,79 +1,46 @@
+# Code Snippet Manager
+Code Snippet Manager is a desktop application built using Electron, React, and TypeScript. It allows users to manage and organize their code snippets efficiently. The application provides the following features:
 
-![ElectronJS + Typescript + ReactJS](https://user-images.githubusercontent.com/46914545/159979537-7116a826-212c-45f4-a393-4abeabeabd07.jpg)
+# Features
 
-## Electron + TypeScript + React
+1. Main Window:
 
-This boilerplate is using [diego3g/electron-typescript-react](https://github.com/diego3g/electron-typescript-react) as base.
-If you want something with styled-components, linting and tests with jest, just go there. 
+Display a list of code snippets.
+Create new snippets, edit existing snippets, and delete snippets.
+Implement search functionality to search for snippets by title or description.
 
-### Differences between this boilerplate and the diego3g's version
-* css support added
-* svg support added
-* jest removed
-* eslint removed
-* styled-components removed
+2. Code Snippet Entry:
 
-The idea of this boilerplate is to be as simple as it can using this three technologies. My thought is to give the developer maximum freedom to choose their own way to write code.
+Each snippet has a title, description, and the code snippet itself.
+Syntax highlighting for the code snippets based on their language using react-ace and AceEditor component.
 
-## Installation
-Download this boilerplate using 
-```bash
-git clone https://github.com/caiulucas/basic-electron-react-typescript
-```
-or click on the `Use this template` option.
+3. Persistence and Storage:
 
-Add `node_modules` in your project
+The application persists code snippets using LocalStorage mechanism.
 
-Using npm: 
-```bash
+# Installation
+
+Install the dependencies by running:
+
 npm install
-```
 
-Using yarn:
-```bash
-yarn
-```
+# Usage
 
-## Usage
+To start the application, use the following command:
 
-Just run `start` script.
+npm start
 
-Using npm:
-```bash
-npm run start
-```
-Using yarn:
-```bash
-yarn start
-```
+# Technologies Used
 
-## Packaging
+- Electron: For creating the desktop application framework.
+- React: For building UI components and managing the application state.
+- TypeScript: For adding static typing to the codebase.
+- react-ace: A code editor component for React, used for syntax highlighting.
+- AceEditor: A code editor component for syntax highlighting based on the language.
+- LocalStorage: Used as a mechanism for persisting code snippets locally.
 
-To generate the project package based on the OS you're running on, just run:
+# Additional Information
 
-Using npm:
-```bash
-npm run package
-```
-
-Using yarn:
-```bash
-yarn package
-```
-## Contributing
-Any pull request or issue is welcome. If you have any idea for this boilerplate, feel free to share it.
-
-If you want to make your own boilerplate using this project as base, just go for it 😃
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
-
-## Code Editor (highlight)
-Using "react-ace" library
-
-import AceEditor from "react-ace";
-
-with "mode" props, we can set the language of the coding panel.
+- The react-ace library is used to integrate AceEditor into the application. It provides a rich code editing experience with syntax highlighting.
+- The AceEditor component is used to render the code snippets and apply syntax highlighting based on the selected language.
+- LocalStorage is used to store code snippets locally on the user's machine. This allows the application to maintain the state even after the user closes and reopens the application.

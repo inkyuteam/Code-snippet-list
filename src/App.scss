@@ -23,7 +23,6 @@ $side-bar-width: 200px;
 
 .app-header {
   padding: var(--pad-3);
-  font-style: italic;
   background-color: var(--dark-color);
   display: flex;
   justify-content: space-between;
@@ -33,6 +32,7 @@ $side-bar-width: 200px;
   display: flex;
   align-items: center;
   font-size: large;
+  font-style: italic;
 }
 
 .app-container {

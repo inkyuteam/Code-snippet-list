@@ -1,15 +1,18 @@
 import React, { useEffect, useRef } from "react";
 import AceEditor from "react-ace";
-
-// import "brace/mode/javascript";
-// import "brace/mode/css";
+import { CodeEditorProps } from "../../interfaces";
 
 const modesContext = require.context("brace/mode", false, /^.*\.js$/);
 modesContext.keys().forEach(modesContext);
 
 import "brace/theme/monokai";
 
-const CodeEditor = ({ index, mode, code, setCode }) => {
+const CodeEditor: React.FC<CodeEditorProps> = ({
+  index,
+  mode,
+  code,
+  setCode,
+}) => {
   const editorRef = useRef(null);
 
   const handleCodeChange = (newCode) => {

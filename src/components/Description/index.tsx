@@ -1,6 +1,11 @@
 import "./index.scss";
+import { DescriptionProps } from "../../interfaces";
 
-const Description = ({ index, description, setDescription }) => {
+const Description: React.FC<DescriptionProps> = ({
+  index,
+  description,
+  setDescription,
+}) => {
   return (
     <div className="description-container">
       <div className="description-header">Description</div>

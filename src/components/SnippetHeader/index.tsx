@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import ace from "ace-builds/src-noconflict/ext-modelist";
 import "./index.scss";
+import { SnippetHeaderProps } from "../../interfaces";
 
-const SnippetHeader = ({
+const SnippetHeader: React.FC<SnippetHeaderProps> = ({
   title,
   setTitle,
   currentMode,
   setCurrentMode,
   setIsDescription,
 }) => {
-  const [modes, setModes] = useState([]);
+  const [modes, setModes] = useState<string[]>([]);
   useEffect(() => {
     import("ace-builds/src-noconflict/ext-modelist").then((modelist) => {
       const modes = modelist.modes;

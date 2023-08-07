@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./index.scss";
+import { MenuBarProps, snippetType } from "../../interfaces";
 
-const MenuBar = ({
+const MenuBar: React.FC<MenuBarProps> = ({
   currentMenuIndex,
   menus,
   setMenuIndex,
@@ -10,7 +11,7 @@ const MenuBar = ({
   searchText,
   searchFilter,
 }) => {
-  const isFiltered = (item) => {
+  const isFiltered = (item: snippetType) => {
     switch (searchFilter) {
       case "ALL":
         return (
@@ -28,10 +29,10 @@ const MenuBar = ({
     }
     return false;
   };
-  const handleMenuClick = (index) => {
+  const handleMenuClick = (index: number) => {
     setMenuIndex(index);
   };
-  const handleBinClick = (index, event) => {
+  const handleBinClick = (index: number, event) => {
     event.stopPropagation();
     setBinIndex(index);
   };

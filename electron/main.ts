@@ -19,13 +19,13 @@ function createWindow() {
     backgroundColor: '#191622',
     webPreferences: {
       nodeIntegration: false,
-      // devTools: true,
+      devTools: true,
       contextIsolation: true,
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY
     }
   })
 
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY)
 

@@ -1,7 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import "./index.scss";
+import { SearchSnippetsProps } from "../../interfaces";
 
-const SearchSnippets = ({
+const SearchSnippets: React.FC<SearchSnippetsProps> = ({
   searchText,
   setSearchText,
   searchFilter,

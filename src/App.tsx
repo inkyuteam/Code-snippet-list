@@ -6,24 +6,27 @@ import CodeEditor from "./components/CodeEditor";
 import SearchSnippets from "./components/SearchSnippets";
 import SnippetHeader from "./components/SnippetHeader";
 import Description from "./components/Description";
+import { snippetType } from "./interfaces";
 
 export const App: React.FC = () => {
   const localStorageKey = "CodeSnippetsManager";
-  const initSnippet = {
+  const initSnippet: snippetType = {
     title: "New Snippet",
     description: "This is the snippet.",
     code: 'console.log("Hello World!")',
     mode: "javascript",
   };
 
-  const [snippets, setSnippets] = useState([initSnippet]);
+  const [snippets, setSnippets] = useState<snippetType[]>([initSnippet]);
 
-  const [searchText, setSearchText] = useState("");
-  const [searchFilter, setSearchFilter] = useState("ALL");
+  const [searchText, setSearchText] = useState<string>("");
+  const [searchFilter, setSearchFilter] = useState<
+    "ALL" | "TITLE" | "DESCRIPTION"
+  >("ALL");
 
-  const [currentSnippetIndex, setCurrentSnippetIndex] = useState(0);
+  const [currentSnippetIndex, setCurrentSnippetIndex] = useState<number>(0);
 
-  const [isDescription, setIsDescription] = useState(true);
+  const [isDescription, setIsDescription] = useState<boolean>(true);
 
   const handleMenuClick = (index) => {
     setCurrentSnippetIndex(index);
@@ -41,7 +44,7 @@ export const App: React.FC = () => {
     }
   };
 
-  const handleCodeChange = (code) => {
+  const handleCodeChange = (code: string) => {
     const updatedSnippets = snippets.map((item, index) => {
       return index === currentSnippetIndex ? { ...item, code: code } : item;
     });
@@ -76,11 +79,11 @@ export const App: React.FC = () => {
     setSnippets(updatedSnippets);
   };
 
-  const handleSearchTextChange = (text) => {
+  const handleSearchTextChange = (text: string) => {
     setSearchText(text);
   };
 
-  const handleSearchFilterChange = (filter) => {
+  const handleSearchFilterChange = (filter: string) => {
     setSearchFilter(filter);
   };
 
